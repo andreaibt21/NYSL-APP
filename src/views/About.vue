@@ -1,5 +1,18 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <TopVar View="About Us"/>
+   <Carousel/>
   </div>
 </template>
+
+<script>
+import Carousel from '@/components/Carousel.vue'
+import TopVar from '@/components/TopVar.vue'
+export default {
+  name: 'About',
+  components: {
+    Carousel,
+    TopVar
+  }
+}
+</script>
