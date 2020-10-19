@@ -66,11 +66,12 @@ export default {
     padding-top: 1.5rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+    margin-bottom: 0;
     
   }
   p{
-    padding: 3.5rem;
-    padding-top: 2rem;
+    padding:1rem 3.5rem 0 3.5rem;
+    
   }
 
 

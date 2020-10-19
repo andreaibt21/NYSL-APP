@@ -34,7 +34,7 @@ export default {
     }
     h1{
         grid-area: title;
-        
+        font-size: 2rem;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
     }

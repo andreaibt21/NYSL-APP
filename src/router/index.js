@@ -24,7 +24,17 @@ const routes = [
    path: '/schedule', 
    name: 'Schedule',
    component: () => import('../views/Schedule.vue')
-  }
+  },
+  {
+    path: '/registration', 
+    name: 'Registration',
+    component: () => import('../views/Registration.vue')
+   },
+   {
+     path: '/rules', 
+     name: 'Rules',
+     component: () => import('../views/Rules.vue')
+    }
 ]
 
 const router = new VueRouter({

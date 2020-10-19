@@ -43,23 +43,27 @@
 #nav {
   padding: 30px;
   justify-content: center;
+  background-color: #146425;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
   i{
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0);
     padding: 10px;
     border-radius: 50%;
-    color:darkcyan;
-    
+    color:#ffffff;
+    background-color: #40854e;
+    // darkcyan
   }
-  
   
   a {
     font-weight: bold;
-    color: #2c3e50;
+  
 
     &.router-link-exact-active {
       
       i{
-      background-color: blue ;}
+      background-color: rgba(32, 86, 158, 0.829) ;}
     }
   }
 }
