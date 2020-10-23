@@ -34,7 +34,13 @@ const routes = [
      path: '/rules', 
      name: 'Rules',
      component: () => import('../views/Rules.vue')
-    }
+    },
+    {
+      path: '/contact', 
+      name: 'Contact',
+      component: () => import('../views/Contact.vue')
+     }
+
 ]
 
 const router = new VueRouter({

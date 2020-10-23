@@ -313,7 +313,7 @@ input{
     width: 90vw;
 }
 legend{
- border-bottom: 1px solid blue;
+ border-bottom: 1px solid #064d63;
  padding-top: 2.5rem;
 }
 #gender {

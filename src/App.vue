@@ -57,13 +57,12 @@
   }
   
   a {
-    font-weight: bold;
-  
+   
 
     &.router-link-exact-active {
       
       i{
-      background-color: rgba(32, 86, 158, 0.829) ;}
+      background-color: #153b47;}
     }
   }
 }
