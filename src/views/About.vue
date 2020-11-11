@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <TopVar View="About Us"/>
+    <TopVar View="About Us" v-bind:ShowImg="true"/>
    <Carousel/>
   </div>
 </template>

@@ -1,44 +1,85 @@
 <template>
-  <div id="container">
-   
-      <img src="../assets/nysl.png" alt="logo" />
-      <h1>{{View}}</h1>
-   
-  </div>
+
+ <div>
+  <b-navbar toggleable="lg" type="light" variant="info">
+    <b-navbar-brand href="#">
+    
+       <img v-show="ShowImg" src="../assets/nysl.png" class="logo" alt="">
+      {{View}}
+      </b-navbar-brand>
+
+    <b-navbar-toggle target="nav-collapse" ></b-navbar-toggle>
+
+    <b-collapse id="nav-collapse" is-nav>
+
+
+      <!-- Right aligned nav items -->
+      <b-navbar-nav class="ml-auto">
+
+        <b-navbar-nav>
+
+          <b-nav-item class="noShow"> <router-link to="/"><i class="fas fa-home"></i> Home </router-link> </b-nav-item>
+          <b-nav-item class="noShow"> <router-link to="/about"><i class="fas fa-info-circle"></i>About </router-link> </b-nav-item>
+          <b-nav-item class="noShow"> <router-link to="/schedule"><i class="fas fa-calendar-alt"></i> Schedule </router-link> </b-nav-item>
+          <b-nav-item class="noShow"> <router-link to="/registration"><i class="fas fa-file-signature"></i>Registration </router-link> </b-nav-item>
+          <b-nav-item class="noShow"> <router-link to="/rules"><i class="fas fa-book"></i> Rules </router-link> </b-nav-item>
+          <b-nav-item class="noShow"> <router-link to="/contact"><i class="fas fa-envelope-open-text"></i> Contact </router-link></b-nav-item>
+          <b-nav-item> <router-link to="/login"><i class="fas fa-envelope-open-text"></i> Log In </router-link></b-nav-item>
+
+        </b-navbar-nav>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
+   </div>
+
+
+ 
 </template>
 
 <script>
 export default {
   name: "TopVar",
-  props: ["View"],
+  props: ["View", "ShowImg"],
+  
 };
+
 </script>
 
 <style scoped lang="scss">
-#container {
-
-  background-color: #cfe7bd;
-  height: 15vh;
-  position: relative;
-  display:grid;
-  grid-template-areas: " img title title "    ;
-  align-items: center;
-  grid-column-gap: 10px;
-  padding: 10px;
-    
-    img {
-      width: 4.5rem;
-      grid-area: img;
-       
-
+div{
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+}
+.bg-info {
+    background-color: #cfe7bd !important;
+}
+.navbar-light .navbar-brand {
+    color: #21963b!important;
+}
+// .navbar-toggler{
+// background-color: #146425!important ; 
+// }
+a {
+  color: #21963b;
+ 
+ &.router-link-exact-active {
+    color:  #2c748a;
+  ;
+    i{
+    color:  #2c748a;
     }
-    h1{
-        grid-area: title;
-        font-size: 2rem;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-    }
-    
+  }
+}
+.logo{
+width: 3rem;
+}
+.noShow{
+  display:none;
+}
 
+@media only screen and (min-width: 600px) {
+  .noShow{
+    display: block;
+  }
 }
 </style>

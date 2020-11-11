@@ -1,6 +1,6 @@
 <template>
    <div> 
-      <TopVar View="Rules"/>
+      <TopVar View="Rules" v-bind:ShowImg="true"/>
       <Collapse />
    </div> 
 </template>

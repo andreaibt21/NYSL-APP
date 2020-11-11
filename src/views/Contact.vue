@@ -1,6 +1,6 @@
 <template>
  <div>
-  <TopVar  View="Contact"/>
+  <TopVar  View="Contact" v-bind:ShowImg="true"/>
   <Email />
   </div>
 </template>

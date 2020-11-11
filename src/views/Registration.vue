@@ -1,6 +1,6 @@
 <template>
   <div>
-      <TopVar View="Registration Form"/>
+      <TopVar View="Registration Form" v-bind:ShowImg="true"/>
       <Form/>
   </div>
 </template>

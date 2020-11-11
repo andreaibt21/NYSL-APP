@@ -1,6 +1,6 @@
 <template>
   <div id="schedule">
-    <TopVar View="Schedule"/>
+    <TopVar View="Schedule" v-bind:ShowImg="true"/>
     <div id="cal">
       <h3>September</h3>
       <Calendar v-bind:dates = "dates.Sep"  />

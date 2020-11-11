@@ -4,7 +4,7 @@
             <div class="line-logo"> 
               <img src="../assets/nysl.png" alt="nysl logo" class="logo">
             </div>   
-        </div>
+         </div>
             <div class="container">
             <div>
              <img src="../assets/donation.png" alt="nysl icon" class="icon">
@@ -23,7 +23,7 @@
              <img src="../assets/field.png" alt="nysl icon" class="icon">
 
              <h2>September 1</h2> 
-             <p>First Game of the Season <br>(Check Game Shedule for details)</p>
+             <p>First Game of the Season <br>(Check Game  <router-link to="/schedule">Shedule</router-link>)</p>
             </div>
 
         </div>
@@ -41,34 +41,55 @@ export default {
 .upcoming{
     background-color: whitesmoke;
     font-family: 'Montserrat', sans-serif;
-    
+    margin-top: 0;
     .header-space{
-        height: 20vh;
+        height: 17vh;
         width: 100vw;
         display: flex;
         align-items: center;
         .line-logo{
-            background-color: #cfe7bd;
             width: 100vw;
-            height: 2.5rem;
+            height: 10vh;
             
             .logo{
                 width: 6rem;
-               margin-top: -1.5rem;
+               margin-top: -1rem;
+              
             }
         }
     }
 }
 .icon{
-    width: 3rem;
+    width: 2.8rem;
+  margin-top: 0;
 }
 .container{
   
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 h2{
  font-size: bold;
  font-size: 25px;
 }
+@media only screen and (min-width: 600px) {
+ .header-space{
+     height: 30vh!important;
+  
+ }.logo{
+         margin-top: -1.8rem!important ;
+     }
+.container{
+    display: flex;
+    justify-content: space-around;
+    div{
+        width: 33%;
+        margin: 0 5px;
+    }
+    h2{
+        border-bottom: 1px solid darkblue;
+    }
+}
+}
+
 </style>
