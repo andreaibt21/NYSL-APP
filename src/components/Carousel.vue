@@ -70,7 +70,9 @@ export default {
     
   }
   p{
-    padding:1rem 3.5rem 0 3.5rem;
+    width: 80%;
+    padding:1rem 1rem 0 1rem;
+    margin: 0 auto;
     
   }
 

@@ -1,6 +1,6 @@
 <template>
   <div id="form">
-    <form action="show_data.html" method="GET">
+    <form>
       <fieldset class="container-fieldset">
         <legend>Personal Info</legend>
 
@@ -269,9 +269,13 @@
           </label>
         </fieldset>
       </fieldset>
-      <label>
-        <input type="submit" value="Submit" id="submit" />
-      </label>
+      <div>
+        <b-button v-b-modal.modal-center>Submit</b-button>
+
+        <b-modal id="modal-center"  hide-footer centered title="Succes">
+        <p class="my-4">Data was submitted successfully</p>
+        </b-modal>
+         </div>
     </form>
   </div>
 </template>

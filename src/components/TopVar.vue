@@ -24,7 +24,7 @@
           <b-nav-item class="noShow"> <router-link to="/registration"><i class="fas fa-file-signature"></i>Registration </router-link> </b-nav-item>
           <b-nav-item class="noShow"> <router-link to="/rules"><i class="fas fa-book"></i> Rules </router-link> </b-nav-item>
           <b-nav-item class="noShow"> <router-link to="/contact"><i class="fas fa-envelope-open-text"></i> Contact </router-link></b-nav-item>
-          <b-nav-item> <router-link to="/login"><i class="fas fa-envelope-open-text"></i> Log In </router-link></b-nav-item>
+          <b-nav-item> <router-link to="/login"><i class="fas fa-user-circle"></i> Log In </router-link></b-nav-item>
 
         </b-navbar-nav>
       </b-navbar-nav>
@@ -51,24 +51,35 @@ div{
     color:white;
 }
 .bg-info {
-    background-color: #cfe7bd !important;
+    background-color: #206a5d !important;
 }
 .navbar-light .navbar-brand {
-    color: #21963b!important;
+    color: #ebecf1!important;
+    
 }
-// .navbar-toggler{
-// background-color: #146425!important ; 
-// }
+
+.navbar-brand {
+  font-size: 22px;
+  font-weight: bold;
+}
+a:hover{
+      color:#1b1c25;
+      background-color: #ebecf1;
+    }
 a {
-  color: #21963b;
+  color: #ebecf1;
  
  &.router-link-exact-active {
-    color:  #2c748a;
+    color:  #1b1c25;
   ;
     i{
-    color:  #2c748a;
+    color:  #1b1c25;
     }
   }
+}
+i{
+  margin-right: 3px;
+  font-size: 20px;
 }
 .logo{
 width: 3rem;

@@ -29,13 +29,16 @@
   padding: 0;
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family:'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   background-color: whitesmoke;
-  height: 100vh;
+  min-height: 100vh;
+
+
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -45,7 +48,7 @@
 #nav {
   padding: 23px;
   justify-content: center;
-  background-color: #146425;
+  background-color: #206a5d ;
   position: fixed;
   bottom: 0;
   width: 100vw;
@@ -57,8 +60,10 @@
     border-radius: 50%;
     color:#ffffff;
     margin: 0 5px;
-    background-color: #40854e;
-    // darkcyan
+    background-color: #08a88c;
+    width: 42px;
+    height: 42px;
+    text-align: center;
   }
   
   a {
@@ -67,7 +72,7 @@
     &.router-link-exact-active {
       
       i{
-      background-color: #153b47;}
+      background-color: #1b1c25;}
     }
   }
 }

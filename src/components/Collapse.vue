@@ -248,7 +248,7 @@
                             third caution (yellow card) during a playing year shall be confiscated by
                             the referee at the conclusion of the match in which the third caution was
                             received. That player will be suspended from playing in the next game in
-                            which the offending participant would otherwise be eligible to participate.
+                            which the offending participant would otherwise be eligible to participate. <br><br>
                             This process will continue so that for every third yellow card received
                             during a playing year, the player will be suspended from playing in the
                             next game (after the receipt of a third yellow card) for which the offending
@@ -517,6 +517,13 @@ name: 'Collapse'
     color: white;
   
   }
-  
+  .card-body{
+    margin: 0;
+    padding: 20px 25px;
+  }
+  p{
+    width: 80%;
+
+  }
 }
 </style>
