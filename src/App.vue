@@ -22,6 +22,20 @@
   </div>
 </template>
 
+<script>
+import {mapMutations} from 'vuex'
+
+export default {
+ name: 'App',
+ methods:{
+  ...mapMutations(['listenUser']) 
+ },
+ beforeMount(){
+     this.listenUser()
+  }
+}
+</script>
+
 <style lang="scss">
 
 *{

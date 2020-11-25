@@ -1,10 +1,19 @@
 <template>
   <div>
+    <TopVar View="Login" v-bind:ShowImg="true"/>
     <template v-if="user == null">
       <button @click="login()">login with google</button>
     </template>
     <template v-else>
+      
+      <div id="info-user">
+        
+        <img id="user-photo" :src="user.photoURL" :alt="user.displayName">
+        <h1>{{user.displayName}}</h1>
+
+      </div>
       <button> chat </button>
+
       <button @click="logout()">log out</button>
     </template>
 
@@ -14,14 +23,18 @@
 <script>
 import firebase from "firebase/app";
 import "firebase/auth";
+import {mapState} from 'vuex';
+import TopVar from '@/components/TopVar.vue';
+
 
 export default {
   name: 'Login',
-  data(){
-        return{
-          user: null,
-
-        }
+  computed:{
+    ...mapState(['user'])
+  },
+  components:{
+      TopVar,
+    
   },
   methods:{
     login(){
@@ -31,14 +44,23 @@ export default {
       .auth()
       .signInWithPopup(provider)
       .then(result => {
-        console.log(result.user)
+        console.log('User info: ' , result.user);
       })
       .catch(error => { 
         console.log(error.code)
       })
     },
     logout(){
-
+      firebase
+      .auth()
+      .signOut()
+      .then(()=> {
+       
+        console.log('User has loged out')
+      })
+      .catch(error => {
+        console.log(error.code)
+      })
     }
   }
   
@@ -46,5 +68,11 @@ export default {
 </script>
 
 <style>
-
+#info-user{
+  margin-top: 25px;
+}
+#user-photo{
+    width: 100px;
+    border-radius: 50%;
+}
 </style>

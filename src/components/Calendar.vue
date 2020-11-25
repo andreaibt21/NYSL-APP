@@ -15,14 +15,14 @@
         <tr class="nine-line">
             <td >9:00</td>
             <td v-for="(e,index) in dates.nine" v-bind:key="index" >
-
+             
                 <p>{{e.teams}}</p>
-                <p class="nofShow"> {{e.location}}</p> 
-                <b-button v-bind:to="'/chat/'+e.number" class="b-table">Chat</b-button>
+                <p> {{e.location}}</p> 
+               
+                <b-button v-bind:to="'/chat/'+e.number" class="b-table b-vertical">Chat</b-button>
 
                 <div class="button-landscape">
                   
-
                   <b-button v-b-toggle="'collapse-' + e.number" variant="primary" class="b-table"><i class="fas fa-map-marked-alt"></i></b-button>
                   <b-collapse v-bind:id="'collapse-' + e.number" class="mt-2">
                     <b-card>
@@ -38,7 +38,7 @@
                   </b-collapse>
                 </div>
     
-                <b-button v-b-modal="'modal-' + e.number"  class="noShow b-table"  ><i class="fas fa-map-marked-alt"></i></b-button>
+                <b-button v-b-modal="'modal-' + e.number"  class="noShow b-table b-vertical"  ><i class="fas fa-map-marked-alt"></i></b-button>
                 <b-modal v-bind:id="'modal-' + e.number" centered hide-footer v-bind:title="e.location">
                   
                  
@@ -46,7 +46,7 @@
                  <iframe v-bind:src="e.map" frameborder="0"></iframe>
                  
                 </b-modal>
-                
+             
             </td>
             
         </tr>
@@ -57,9 +57,12 @@
                 <p>{{e.teams}}</p>
                 <p> {{e.location}}</p> 
 
+                <b-button v-bind:to="'/chat/'+e.number" class="b-table b-vertical">Chat</b-button>
                     
                 <div class="button-landscape">
+                 
                   <b-button v-b-toggle="'collapse-' + e.number" variant="primary" class="b-table"><i class="fas fa-map-marked-alt"></i></b-button>
+                 
                   <b-collapse v-bind:id="'collapse-' + e.number" class="mt-2">
                     <b-card>
                       <p class="card-text">
@@ -74,8 +77,7 @@
                   </b-collapse>
                 </div>
 
-
-                <b-button v-b-modal="'modal-' + e.number"  class="noShow b-table"><i class="fas fa-map-marked-alt"></i></b-button>
+                <b-button v-b-modal="'modal-' + e.number"  class="noShow b-table b-vertical"><i class="fas fa-map-marked-alt"></i></b-button>
                 <b-modal v-bind:id="'modal-' + e.number" centered hide-footer v-bind:title="e.location">
             
             
@@ -101,7 +103,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scope lang="scss">
 table{
     width: 100% ;
 }
@@ -128,14 +130,19 @@ thead {
 
 th, td{
     text-align: center;
-    padding: 20px 5px;
+    padding: 20px 15px;
     width: 150px;
 }
 .btn-primary, .b-table{
     background-color: #064d6391!important;
     border: none;
+
+
     &:hover{
         background-color:  #0484ac91!important;}
+}
+.b-vertical{
+margin: 5px 10px 0 10px;
 }
 iframe{
   width: 100%;
@@ -149,7 +156,7 @@ b-button{
     margin-top: 10px;
 }
 p{
-    width: 160px;
+    width: 180px;
     margin: 0 auto;
 }
 i{
@@ -157,11 +164,9 @@ i{
 }
 .button-landscape{
     display: none;
-    
+   margin-top: 10px;
 } 
-::-webkit-scrollbar-thumb{
-  background: red ;
-}
+
 
 @media only screen and (min-width: 600px) {
   .noShow{
@@ -169,6 +174,11 @@ i{
   }
   .button-landscape{
     display: block;
+}
+.b-vertical{
+
+margin: 10px 0 0 0;
+
 }
 }
 </style>
