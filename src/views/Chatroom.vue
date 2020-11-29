@@ -73,6 +73,11 @@ export default {
           folder.push(message)
           this.input = null
         }
+        // ,
+        // updateScroll: function(){
+        //  let element = document.getElementById("messages-container");
+        //   element.scrollTop = element.scrollHeight;
+        // }
     },
     computed: {
         ...mapState(['user'])
@@ -83,6 +88,11 @@ export default {
             this.messages.push(snapshot.val())
         })
     }
+    // ,
+    // update(){
+    //      let element = document.getElementById("messages-container");
+    //       element.scrollTop = element.scrollHeight;
+    // }
 
 }
 </script>
@@ -115,8 +125,9 @@ export default {
     overflow-y: scroll!important;
 }
 form{
-    margin-top: 20px;
-
+    position: fixed;
+    bottom: 110px;
+    left: 10vw;
     input{
     width: 55vw;
     background-color: #064d6391 ;

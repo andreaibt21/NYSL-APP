@@ -50,9 +50,6 @@ export default {
   color: #2c3e50;
   background-color: whitesmoke;
   min-height: 100vh;
-
-
-  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
