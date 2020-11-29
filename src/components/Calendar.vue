@@ -19,7 +19,7 @@
                 <p>{{e.teams}}</p>
                 <p> {{e.location}}</p> 
                
-                <b-button v-bind:to="'/chat/'+e.number" class="b-table b-vertical">Chat</b-button>
+                <b-button v-bind:to="'/chatroom/'+e.number" class="b-table b-vertical">Chat</b-button>
 
                 <div class="button-landscape">
                   
@@ -57,7 +57,7 @@
                 <p>{{e.teams}}</p>
                 <p> {{e.location}}</p> 
 
-                <b-button v-bind:to="'/chat/'+e.number" class="b-table b-vertical">Chat</b-button>
+                <b-button v-bind:to="'/chatroom/'+e.number" class="b-table b-vertical">Chat</b-button>
                     
                 <div class="button-landscape">
                  

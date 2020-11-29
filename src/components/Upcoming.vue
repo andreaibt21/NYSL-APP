@@ -7,7 +7,7 @@
          </div>
             <div class="container">
             <div>
-             <img src="../assets/donation.png" alt="nysl icon" class="icon">
+             <img src="../assets/donation.svg" alt="nysl icon" class="icon">
              <h2>August 4</h2>  
              <p>NYSL Fundraiser</p>
             </div>
@@ -63,14 +63,16 @@ export default {
     width: 2.8rem;
   margin-top: 0;
 }
-.container{
-  
-    padding-top: 10px;
-}
+
 
 h2{
  font-size: bold;
  font-size: 25px;
+ width: 170px;
+ margin: 0 auto;
+}
+p{
+    margin-bottom: 10px;
 }
 @media only screen and (min-width: 600px) {
  .header-space{
@@ -83,7 +85,7 @@ h2{
     display: flex;
     justify-content: space-around;
     div{
-        width: 33%;
+        width: 34%;
         margin: 0 5px;
     }
     h2{
