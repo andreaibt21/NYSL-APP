@@ -23,7 +23,7 @@
              <img src="../assets/field.png" alt="nysl icon" class="icon">
 
              <h2>September 1</h2> 
-             <p id="long">First Game of the Season <br>(Check Game  <router-link to="/schedule">Shedule</router-link>)</p>
+             <p id="long">First Game of the Season <br>(Check Game  <router-link to="/schedule">Shedule and Chatrooms</router-link>)</p>
             </div>
 
         </div>

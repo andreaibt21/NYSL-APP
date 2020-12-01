@@ -27,6 +27,7 @@
                     </p>
                     </div>
                 </div>
+                <div id="bottom"></div>
             </div>
            <form @submit.prevent="post()">
                <input type="text" placeholder="Enter your message" v-model="input" />
@@ -72,12 +73,10 @@ export default {
         
           folder.push(message)
           this.input = null
+        },
+        updateScroll: function(){
+         document.getElementById('bottom').scrollIntoView()
         }
-        // ,
-        // updateScroll: function(){
-        //  let element = document.getElementById("messages-container");
-        //   element.scrollTop = element.scrollHeight;
-        // }
     },
     computed: {
         ...mapState(['user'])
@@ -86,13 +85,11 @@ export default {
         this.messages = [];
         db.ref("forum/match" + this.$route.params.id).on("child_added",(snapshot) => {
             this.messages.push(snapshot.val())
+            this.$nextTick(() => {
+                this.updateScroll()
+            })
         })
     }
-    // ,
-    // update(){
-    //      let element = document.getElementById("messages-container");
-    //       element.scrollTop = element.scrollHeight;
-    // }
 
 }
 </script>
