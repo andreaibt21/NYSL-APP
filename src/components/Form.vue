@@ -1,55 +1,30 @@
 <template>
   <div id="form">
-    <form>
+    <form @submit.prevent="modalSucces()">
       <fieldset class="container-fieldset">
         <legend>Personal Info</legend>
 
         <div>
           <label for="first-name"> Player's First Name: </label>
-          <input
-            type="text"
-            name="first-name"
-            id="first-name"
-            class="input-field"
-          />
+          <input type="text" name="first-name" id="first-name" class="input-field" required />
 
           <label for="last-name"> Last Name: </label>
-          <input
-            type="text"
-            name="last-name"
-            id="last-name"
-            class="input-field"
-          />
+          <input type="text" name="last-name" id="last-name" class="input-field" required/>
 
           <label for="street-address"> Street Address: </label>
-          <input
-            type="text"
-            name="street-address"
-            id="street-address"
-            class="input-field"
-          />
+          <input type="text" name="street-address" id="street-address" class="input-field" required/>
 
           <label for="city"> City: </label>
-          <input type="text" name="city" id="city" class="input-field" />
+          <input type="text" name="city" id="city" class="input-field" required />
 
           <label for="zip-code"> Zip Code: </label>
-          <input
-            type="number"
-            name="zip-code"
-            id="zip-code"
-            class="input-field"
-          />
+          <input type="number" name="zip-code" id="zip-code" class="input-field" required />
 
           <label for="birth-date"> Birth Date: </label>
-          <input
-            type="date"
-            name="birth-date"
-            id="birth-date"
-            class="input-field"
-          />
+          <input type="date" name="birth-date" id="birth-date" class="input-field" required />
           
         </div>
-        <fieldset id="gender">
+        <fieldset id="gender" >
           <p>Gender:</p>
           <label>
             <input type="radio" name="gender" id="female" value="Female" />
@@ -66,7 +41,7 @@
         <div>
           <label for="grade"
             >Grade:
-            <select name="grade" id="grade" class="input-field">
+            <select name="grade" id="grade" class="input-field" >
               <option value="pre-school">Pre-School</option>
               <option value="1st">1st</option>
               <option value="2nd">2nd</option>
@@ -78,25 +53,15 @@
 
           <label for="parent"
             >Parent/Guardian:
-            <input type="text" name="parent" id="parent" class="input-field" />
+            <input type="text" name="parent" id="parent" class="input-field" required/>
           </label>
           <label for="phone-number">
             Contact Phone:
-            <input
-              type="tel"
-              name="phone-number"
-              id="phone-number"
-              class="input-field"
-            />
+            <input type="tel" name="phone-number" id="phone-number" class="input-field" required/>
           </label>
           <label for="mail-contact"
             >Mail:
-            <input
-              type="email"
-              name="mail-contact"
-              id="mail-contact"
-              class="input-field"
-            />
+            <input type="email" name="mail-contact" id="mail-contact" class="input-field" required/>
           </label>
         </div>
 
@@ -261,21 +226,24 @@
           </p>
           <label
             >Parent/Guardian Signature:
-            <input type="text" name="signature" class="input-field" />
+            <input type="text" name="signature" class="input-field" required/>
           </label>
           <label
             >Date:
-            <input type="date" name="date" class="input-field" />
+            <input type="date" name="date" class="input-field" required/>
           </label>
         </fieldset>
       </fieldset>
-      <div>
-        <b-button v-b-modal.modal-center>Submit</b-button>
+      
+     <label>
+      <input type="submit" value="Submit" id="submit" >
+      </label>
 
-        <b-modal id="modal-center"  hide-footer centered title="Succes">
-        <p class="my-4">Data was submitted successfully</p>
-        </b-modal>
-         </div>
+
+      <b-modal id="modal-center"  hide-footer centered title="Succes">
+      <p class="my-4">Data was submitted successfully</p>
+      </b-modal>
+      
     </form>
   </div>
 </template>
@@ -283,6 +251,12 @@
 <script>
 export default {
   name: "Form",
+  methods:{
+
+    modalSucces(){
+      this.$bvModal.show("modal-center")
+    }
+  }
 };
 </script>
 

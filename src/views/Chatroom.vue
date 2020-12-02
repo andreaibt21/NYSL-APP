@@ -118,25 +118,33 @@ export default {
     align-items: center;
 }
 #messages-container{
-    height: 60vh;
+    height: 63vh;
     overflow-y: scroll!important;
 }
 form{
-    position: fixed;
-    bottom: 110px;
-    left: 10vw;
+   position: fixed;
+    bottom: 80px;
+    left: 0;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    background: whitesmoke;
+    align-items: center;
+    height: 100px;
     input{
     width: 55vw;
     background-color: #064d6391 ;
     color: white;
     border-radius: 10px;
     padding: 5px 20px;
+    height: 45px;
     }
     ::placeholder {
         color: white;
     }
     button {
     background-color: #033949;
+    height: 50px;
     padding: 15px 20px;
     border-radius: 10px;
     align-items: center;
@@ -181,8 +189,16 @@ img{
     margin-right: 10px;
 }
 @media only screen and (min-width: 600px) {
-form{
-    margin-top: 10px;
-}
+  form{
+    position: fixed;
+    bottom: 0;
+    height: 80px;
+    left: 0;
+    background: whitesmoke;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    
+    }
 }
 </style>
