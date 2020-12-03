@@ -97,6 +97,7 @@ button{
 }
 h2{
   margin: 15px;
+  font-size: 1.5rem;
 }
 #container{
   width: 90vw;
@@ -126,6 +127,13 @@ h2{
   }
   button{
   padding: 8px 20px;
+  }
+  #user-photo{
+    width: 80px;  
+  }
+  #no-user{
+    width: 100px;
+    margin-top: 10px;
   }
 }
 
