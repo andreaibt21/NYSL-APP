@@ -14,7 +14,7 @@
         
         <img id="user-photo" :src="user.photoURL" :alt="user.displayName">
         <h1>{{user.displayName}}</h1>
-        <h2>Welcome to our app! <br> Now you can have access to the chatrooms displayed on the <router-link to="/schedule">Shedule</router-link> </h2>
+        <h2>Welcome to our app! <br> Now you can have access to the chatrooms displayed on the <router-link to="/schedule">Schedule</router-link> </h2>
 
       </div>
      
